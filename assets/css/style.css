@@ -1,0 +1,27 @@
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff7ed;
+    /* orange-50 */
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f97316;
+    /* orange-500 */
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ea580c;
+    /* orange-600 */
+}
+
+/* Memastikan tabel selalu terlihat rapi saat discroll horizontal */
+.table-container {
+    scrollbar-width: thin;
+    scrollbar-color: #f97316 #fff7ed;
+}
