@@ -50,13 +50,15 @@ Sebagai sebuah aplikasi interaktif, sistem ini memiliki komponen *Database Relat
 - **Frontend / Antarmuka**: Tailwind CSS (dipanggil via metode CDN).
 
 ### Panduan Instalasi (Deployment)
-1. **Pindahkan Folder Direktori**: Ekstrak atau *clone* repository file aplikasi `spkhayo` ini ke dalam direktori *Document Root* HTTP lokal instalasi Anda.
-   - Pilihan Laragon: Pindahkan ke `C:\laragon\www\spkhayo\`
-   - Pilihan XAMPP: Pindahkan ke `C:\xampp\htdocs\spkhayo\`
+1. **Clone Repository**: *Clone* (unduh) repository GitHub ini ke dalam direktori *Document Root* HTTP lokal instalasi Anda (`htdocs` jika XAMPP, atau `www` jika Laragon). Jalankan di terminal:
+   ```bash
+   git clone https://github.com/hananaila/SAW-HayoChicken.git
+   ```
+   Pastikan folder proyek hasil *clone* (atau hasil *rename* Anda) dapat diakses melalui browser.
 2. **Aktivasi Modul Server**: Buka kontrol panel sistem Laragon atau XAMPP Anda. Nyalakan layanan (Start) pada modul utama **Apache** dan **MySQL**.
 3. **Konfigurasi Seeding Database Otomatis**:
    - Untuk mematuhi kerangka data awal, buka browser apa saja dan jalankan URL berikut untuk instalasi sistem:
-     `http://localhost/spkhayo/seed.php`
+     `http://localhost/SAW-HayoChicken/seed.php`
    - *Script* pemandu tersebut akan secara otomatis membentuk struktur database bernama `spk_hayo_chicken`, merakit infrastruktur tabel, serta menyuntikkan data *seeding* entitas aktual (3 penjual internal & 33 konsumen publik) untuk mensimulasikan hasil penghitungan numerik awal secara paripurna. Atau, Anda dapat langsung meng-import file `database.sql` ke MySQL.
 
 ### Cara Mengoperasikan Aplikasi
@@ -64,12 +66,12 @@ Sebagai sebuah aplikasi interaktif, sistem ini memiliki komponen *Database Relat
 Aplikasi berjalan pada dua lapisan portal fungsional utama:
 
 **A. Mode Responden Survei (Formulir Publik & Karyawan)**
-- Buka tautan navigasi berikut: `http://localhost/spkhayo/form_kuesioner.php`.
+- Buka tautan navigasi berikut: `http://localhost/SAW-HayoChicken/form_kuesioner.php`.
 - Responden diinstruksikan untuk memilih validasi peran / *Role* mereka (kategori *Tim Internal* atau *Pelanggan Konsumen Publik*).
 - Pertanyaan antarmuka survei akan beradaptasi secara dinamis menyesuaikan kategori. Responden memberikan input validasi metrik antara bintang 1 hingga 5. Begitu rekaman dikirim melalui tombol "Kirim Penilaian", data kalkulasinya akan secara *real-time* merekalibrasi struktur analisis di panel administrator.
 
 **B. Mode Dashboard Administrasi (Untuk Pemilik)**
-- Akses portal dashboard sentral ini melalui tautan utama: `http://localhost/spkhayo/`
+- Akses portal dashboard sentral ini melalui tautan utama: `http://localhost/SAW-HayoChicken/`
 - Anda akan diwajibkan melewati prosedur autentikasi gerbang masuk. Silakan gunakan kredensial portal berikut:
   *   **Username**: `okti`
   *   **Password**: `admin123`
