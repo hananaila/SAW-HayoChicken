@@ -44,7 +44,7 @@ Sistem mengklasifikasikan kriteria menjadi dua sifat mutlak: turunan atribut *Be
 Sebagai sebuah aplikasi interaktif, sistem ini memiliki komponen *Database Relational* otomatis dan lapisan antarmuka evaluasi yang terpisah antara Admin dan Responden Survei.
 
 ### Kebutuhan Sistem Operasional
-- **Web Server Lokal**: Laragon (Rekomendasi Utama) atau XAMPP.
+- **Web Server Lokal**: Laragon atau XAMPP.
 - **Bahasa Pemrograman**: PHP 7.4 / PHP 8.x.
 - **Sistem Database**: MySQL / MariaDB.
 - **Frontend / Antarmuka**: Tailwind CSS (dipanggil via metode CDN).
